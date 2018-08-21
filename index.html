@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>My FCC Survey Form</h1>
-    
+    <h1 id="title">Gastrodiplomacy Survey Form</h1>
+    <p id="description">Please let us know about your food experience.</p>
+    <form id="survey-form">
+        <label for="name" id="name-label">Your name:</label>
+        <input type="text" id="name" placeholder="Enter your name here" required>
+        <label for="email" id="email-label">Your email:</label>
+        <input type="email" id="email" placeholder="Enter your email here" required>
+        <label for="number" id="number-label">Your age:</label>
+        <input type="number" id="number" min="6" max="120" placeholder="Enter your age here" required>
+
+        <select name="experience" id="dropdown">
+            <option value="cooking-noobs">Cooking Noob</option>
+            <option value="cooking-enthusiast">Cooking Enthusiast</option>
+            <option value="Eater">Meh, I'm just an eater</option>
+        </select>
+
+        <p id="enthusiasm">How likely is that would you join one of our classes? <br/>
+            <input type="radio" name="enthusiasm-level" value="Hell yea!">Hell yea!
+            <input type="radio" name="enthusiasm-level" value="OK...Maybe">OK...Maybe
+            <input type="radio" name="enthusiasm-level" value="Nah">Nah
+        </p>
+
+        <p id="interest">Please select what interests you most.
+            <input type="checkbox" name="interest" value="Recipes">Recipes
+            <input type="checkbox" name="interest" value="Local ingredients">Local ingredients
+            <input type="checkbox" name="interest" value="Local cooking techniques">Local cooking techniques
+            <input type="checkbox" name="interest" value="History">History
+            <input type="checkbox" name="interest" value="General geographical/national information">General geographical/national information
+            <input type="checkbox" name="interest" value="Social and political issues">Social/political issues
+        </p>
+
+        <p>Please let us know if you have any comments or suggestions.
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        </p>
+
+<p>Thanks for answering our survey! You rock!</p>
+    <input type="submit" id="submit">
+
+    </form>
+
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
-</html>
 
+</html>
